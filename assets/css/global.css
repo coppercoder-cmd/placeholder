@@ -67,7 +67,7 @@ p {
 }
 
 /* --------------------------------------------------
-   NAVBAR — FULL LEFT/RIGHT ALIGNMENT
+   NAVBAR — FULL LEFT/RIGHT + INTERACTION ANIMATION
    -------------------------------------------------- */
 
 .navbar {
@@ -103,17 +103,25 @@ p {
   gap: 2rem;
 }
 
-/* Force all link states to stay white */
+/* Links look like plain text */
 .nav-right a,
 .nav-right a:visited,
 .nav-right a:active {
   color: var(--light);
   text-decoration: none;
   font-weight: 500;
+  transition: transform 0.15s ease, color 0.15s ease;
 }
 
+/* Hover: reveal link + enlarge slightly */
 .nav-right a:hover {
   color: var(--blue);
+  transform: scale(1.08);
+}
+
+/* Click: shrink slightly */
+.nav-right a:active {
+  transform: scale(0.94);
 }
 
 /* --------------------------------------------------
