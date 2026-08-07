@@ -103,7 +103,10 @@ p {
   gap: 2rem;
 }
 
-.nav-right a {
+/* Force all link states to stay white */
+.nav-right a,
+.nav-right a:visited,
+.nav-right a:active {
   color: var(--light);
   text-decoration: none;
   font-weight: 500;
