@@ -12,7 +12,7 @@
   --slate: #1E293B;
   --blue: #0162B7;
   --grey-blue: #64748B;
-  --light: #F1F5F9;
+  --light: #FFFFFF;
   --success: #10B981;
 
   --max-width: 1200px;
@@ -27,8 +27,8 @@
 
 body {
   font-family: 'Figtree', sans-serif;
-  background: var(--black);
-  color: var(--light);
+  background: var(--light);   /* WHITE SITE */
+  color: var(--black);        /* BLACK TEXT */
   line-height: 1.6;
 }
 
@@ -49,11 +49,6 @@ body {
   color: var(--light);
 }
 
-.section-slate {
-  background: var(--slate);
-  color: var(--light);
-}
-
 .section-light {
   background: var(--light);
   color: var(--black);
@@ -71,14 +66,10 @@ p {
   color: var(--grey-blue);
 }
 
-.section-light p {
-  color: var(--slate);
-}
-
 /* Navbar */
 .navbar {
   width: 100%;
-  background: var(--black);
+  background: var(--black); /* BLACK NAVBAR */
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -134,6 +125,8 @@ p {
 /* Hero */
 .hero {
   padding: 8rem 0 6rem;
+  background: var(--light); /* WHITE HERO */
+  color: var(--black);
 }
 
 .hero h1 {
@@ -162,10 +155,10 @@ p {
 
 /* Feature Cards */
 .feature-card {
-  background: var(--slate);
+  background: var(--light); /* WHITE CARDS */
   padding: 2rem;
   border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .feature-card h3 {
@@ -173,15 +166,15 @@ p {
 }
 
 .feature-card p {
-  color: var(--light);
+  color: var(--grey-blue);
 }
 
 /* Case Studies */
 .case-study {
-  background: var(--slate);
+  background: var(--light); /* WHITE CASE STUDIES */
   padding: 2rem;
   border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 /* Lead Capture */
@@ -206,7 +199,7 @@ p {
 
 /* Footer */
 .footer {
-  background: var(--black);
+  background: var(--black); /* BLACK FOOTER */
   padding: 3rem 0;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
