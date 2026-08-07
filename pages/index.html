@@ -9,21 +9,16 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container">
-            <img src="../assets/img/tarid-logo.svg" alt="Tarid Logo" height="32">
-            <div>
-                <a href="index.html">Home</a>
-                <a href="features.html">Features</a>
-                <a href="security.html">Security</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- NAVBAR COMPONENT -->
+    <div id="navbar"></div>
+    <script>
+        fetch('../components/navbar.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('navbar').innerHTML = html);
+    </script>
 
     <!-- HERO -->
-    <section class="hero section-dark">
+    <section class="hero section-light">
         <div class="container">
             <h1>Secure, Simple Employee Provisioning for Growing SaaS Teams</h1>
             <p>Tarid orchestrates your HR and IT workflows with clarity, consistency and control. Reduce risk, eliminate manual processes and create a seamless experience for every employee joining or leaving your organisation.</p>
@@ -51,7 +46,7 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="section-slate">
+    <section class="section-light">
         <div class="container">
             <h2>Built for security, clarity and operational confidence</h2>
 
@@ -75,7 +70,7 @@
     </section>
 
     <!-- CASE STUDIES -->
-    <section class="section-dark">
+    <section class="section-light">
         <div class="container">
             <h2>Teams like yours are already simplifying their operations</h2>
 
@@ -108,12 +103,13 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Tarid. Enterprise‑grade employee provisioning.</p>
-        </div>
-    </footer>
+    <!-- FOOTER COMPONENT -->
+    <div id="footer"></div>
+    <script>
+        fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
 
 </body>
 </html>
