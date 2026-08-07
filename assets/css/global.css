@@ -2,10 +2,10 @@
    Global CSS — Enterprise Security Aesthetic
    Figtree + Black/Slate/Deep Blue Palette
    -------------------------------------------------- */
-
+ 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
-
+ 
 /* Root Variables */
 :root {
   --black: #000000;
@@ -14,24 +14,24 @@
   --grey-blue: #64748B;
   --light: #FFFFFF;
   --success: #10B981;
-
+ 
   --max-width: 1200px;
 }
-
+ 
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: 'Figtree', sans-serif;
   background: var(--light);
   color: var(--black);
   line-height: 1.6;
 }
-
+ 
 /* Layout */
 .container {
   width: 100%;
@@ -39,70 +39,70 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
+ 
 .section {
   padding: 5rem 0;
 }
-
+ 
 .section-dark {
   background: var(--black);
   color: var(--light);
 }
-
+ 
 .section-light {
   background: var(--light);
   color: var(--black);
 }
-
+ 
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.2rem;
 }
-
+ 
 p {
   margin-bottom: 1rem;
   color: var(--grey-blue);
 }
-
+ 
 /* --------------------------------------------------
    NAVBAR — FULL LEFT/RIGHT + INTERACTION ANIMATION
    -------------------------------------------------- */
-
+ 
 .navbar {
   width: 100%;
   background: var(--black);
   padding: 1.2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-
+ 
 .navbar .container {
   width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0 2rem;
-
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+ 
 .nav-left {
   display: flex;
   align-items: center;
 }
-
+ 
 .nav-left img {
   height: 32px;
 }
-
+ 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-
+ 
 /* FORCE ALL LINK STATES TO WHITE (except hover) */
 .nav-right a,
 .nav-right a:link,
@@ -114,22 +114,22 @@ p {
   font-weight: 500;
   transition: transform 0.15s ease, color 0.15s ease;
 }
-
+ 
 /* Hover: reveal link + enlarge slightly */
 .nav-right a:hover {
   color: var(--blue) !important;
   transform: scale(1.08);
 }
-
+ 
 /* Click: shrink slightly */
 .nav-right a:active {
   transform: scale(0.94);
 }
-
+ 
 /* --------------------------------------------------
    BUTTONS
    -------------------------------------------------- */
-
+ 
 .btn-primary {
   display: inline-block;
   background: var(--blue);
@@ -138,12 +138,16 @@ p {
   border-radius: 4px;
   font-weight: 600;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
 }
-
+ 
 .btn-primary:hover {
   background: #02539a;
 }
-
+ 
 .btn-secondary {
   display: inline-block;
   background: transparent;
@@ -154,87 +158,87 @@ p {
   font-weight: 500;
   text-decoration: none;
 }
-
+ 
 .btn-secondary:hover {
   border-color: var(--blue);
   color: var(--blue);
 }
-
+ 
 /* --------------------------------------------------
    HERO
    -------------------------------------------------- */
-
+ 
 .hero {
   padding: 8rem 0 6rem;
   background: var(--light);
   color: var(--black);
 }
-
+ 
 .hero h1 {
   font-size: 3rem;
   max-width: 700px;
 }
-
+ 
 .hero p {
   max-width: 550px;
   margin-bottom: 2rem;
 }
-
+ 
 /* --------------------------------------------------
    GRID SYSTEM
    -------------------------------------------------- */
-
+ 
 .grid {
   display: grid;
   gap: 2rem;
 }
-
+ 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
-
+ 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
 }
-
+ 
 /* --------------------------------------------------
    FEATURE CARDS
    -------------------------------------------------- */
-
+ 
 .feature-card {
   background: var(--light);
   padding: 2rem;
   border-radius: 6px;
   border: 1px solid rgba(0,0,0,0.08);
 }
-
+ 
 .feature-card h3 {
   margin-bottom: 0.8rem;
 }
-
+ 
 .feature-card p {
   color: var(--grey-blue);
 }
-
+ 
 /* --------------------------------------------------
    CASE STUDIES
    -------------------------------------------------- */
-
+ 
 .case-study {
   background: var(--light);
   padding: 2rem;
   border-radius: 6px;
   border: 1px solid rgba(0,0,0,0.08);
 }
-
+ 
 /* --------------------------------------------------
    LEAD FORM
    -------------------------------------------------- */
-
+ 
 .lead-form {
   max-width: 500px;
 }
-
+ 
 .lead-form input,
 .lead-form textarea {
   width: 100%;
@@ -244,53 +248,483 @@ p {
   border: 1px solid var(--grey-blue);
   background: #fff;
   color: var(--black);
+  font-family: 'Figtree', sans-serif;
 }
-
+ 
 .lead-form button {
   width: 100%;
 }
-
+ 
 /* --------------------------------------------------
    FOOTER
    -------------------------------------------------- */
-
+ 
 .footer {
   background: var(--black);
   padding: 3rem 0;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
-
+ 
 .footer p {
   color: var(--grey-blue);
 }
-
+ 
 /* --------------------------------------------------
    RESPONSIVE
    -------------------------------------------------- */
-
+ 
 @media (max-width: 900px) {
-
+ 
   .grid-3 {
     grid-template-columns: 1fr;
   }
-
+ 
   .grid-2 {
     grid-template-columns: 1fr;
   }
-
+ 
   .hero h1 {
     font-size: 2.4rem;
   }
 }
-
+ 
 @media (max-width: 600px) {
-
+ 
   .navbar .container {
     flex-direction: column;
     gap: 1rem;
   }
-
+ 
   .nav-right {
     gap: 1.2rem;
   }
 }
+ 
+/* ====================================================
+   EXTENDED — LANDING PAGE REBUILD (v2)
+   Adds a monospace utility face (the "systems" voice —
+   IT/audit) alongside Figtree (the "human" voice — HR/
+   marketing), plus the components built for the new
+   homepage. Nothing above this line was changed, so
+   features.html / security.html / contact.html are
+   unaffected.
+   ==================================================== */
+ 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+ 
+:root {
+  --mist: #F3F6FA;
+  --line: rgba(15, 23, 42, 0.08);
+  --line-dark: rgba(255, 255, 255, 0.08);
+  --revoke: #C2483A;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+ 
+/* Accessibility utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+ 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--blue);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+ 
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+ 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+ 
+/* Section rhythm */
+.section-mist {
+  background: var(--mist);
+}
+ 
+/* Eyebrow — mono signpost used above each major section */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+ 
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+ 
+/* Hero layout */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+ 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+ 
+.hero-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--slate);
+  text-decoration: none;
+  border-bottom: 1px solid var(--grey-blue);
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+ 
+.hero-link:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+ 
+/* Access Log console — signature element */
+.log-console {
+  background: var(--slate);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+ 
+.log-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line-dark);
+}
+ 
+.log-console-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+ 
+.log-console-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+ 
+.log-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transform: translateY(4px);
+  animation: logIn 0.4s ease forwards;
+}
+ 
+.log-line:last-child {
+  border-bottom: none;
+}
+ 
+.log-time {
+  color: #64748B;
+  flex-shrink: 0;
+}
+ 
+.log-name {
+  color: #E2E8F0;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.log-status {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+ 
+.log-status.granted {
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.12);
+}
+ 
+.log-status.revoked {
+  color: #F0A08A;
+  background: rgba(194, 72, 58, 0.18);
+}
+ 
+.log-line:nth-child(2) { animation-delay: 0.12s; }
+.log-line:nth-child(3) { animation-delay: 0.28s; }
+.log-line:nth-child(4) { animation-delay: 0.44s; }
+.log-line:nth-child(5) { animation-delay: 0.6s; }
+.log-line:nth-child(6) { animation-delay: 0.76s; }
+ 
+@keyframes logIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .log-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+ 
+/* Stat strip */
+.stat-strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+ 
+.stat-strip .grid-3 {
+  padding: 2.5rem 0;
+}
+ 
+.stat-number {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+ 
+.stat-label {
+  color: var(--grey-blue);
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+ 
+/* Icons — hand-drawn line set, single stroke weight */
+.icon {
+  width: 30px;
+  height: 30px;
+  stroke: var(--blue);
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin-bottom: 1rem;
+  display: block;
+}
+ 
+.icon-muted {
+  stroke: var(--grey-blue);
+}
+ 
+/* Problem / Solution panels */
+.panel {
+  padding: 2.25rem;
+  border-radius: 8px;
+}
+ 
+.panel-problem {
+  background: var(--mist);
+}
+ 
+.panel-solution {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+}
+ 
+.panel p:last-child {
+  margin-bottom: 0;
+}
+ 
+/* Process steps — a real sequence, numbered on purpose */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 3rem;
+}
+ 
+.process-step {
+  position: relative;
+  padding: 0 1.75rem;
+}
+ 
+.process-step:first-child {
+  padding-left: 0;
+}
+ 
+.process-step:last-child {
+  padding-right: 0;
+}
+ 
+.process-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+ 
+.process-line {
+  position: absolute;
+  top: 0.6rem;
+  left: -1.75rem;
+  width: 1.75rem;
+  height: 1px;
+  background: var(--line);
+}
+ 
+.process-step:first-child .process-line {
+  display: none;
+}
+ 
+.process-step p:last-child {
+  margin-bottom: 0;
+}
+ 
+/* Outcome (case study) cards */
+.outcome-card {
+  background: var(--light);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2.25rem;
+}
+ 
+.outcome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+ 
+.outcome-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+ 
+.outcome-type {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--grey-blue);
+}
+ 
+.outcome-stat {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--black);
+  font-weight: 600;
+  margin-top: 1.25rem;
+  display: block;
+}
+ 
+.outcome-card p:last-of-type {
+  margin-bottom: 0;
+}
+ 
+/* Form refinements */
+.lead-form select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--grey-blue);
+  background: #fff;
+  color: var(--black);
+  font-family: 'Figtree', sans-serif;
+}
+ 
+.lead-form label {
+  display: block;
+}
+ 
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--grey-blue);
+  margin-top: -0.4rem;
+  margin-bottom: 0;
+}
+ 
+/* Responsive extensions */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+ 
+  .process-step {
+    padding: 0;
+  }
+ 
+  .process-line {
+    display: none;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .stat-strip .grid-3 {
+    gap: 2rem;
+  }
+ 
+  .outcome-header {
+    flex-wrap: wrap;
+  }
+}
+ 
