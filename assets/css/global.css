@@ -103,19 +103,21 @@ p {
   gap: 2rem;
 }
 
-/* Links look like plain text */
+/* FORCE ALL LINK STATES TO WHITE (except hover) */
 .nav-right a,
+.nav-right a:link,
 .nav-right a:visited,
+.nav-right a:focus,
 .nav-right a:active {
-  color: var(--light);
-  text-decoration: none;
+  color: var(--light) !important;
+  text-decoration: none !important;
   font-weight: 500;
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
 /* Hover: reveal link + enlarge slightly */
 .nav-right a:hover {
-  color: var(--blue);
+  color: var(--blue) !important;
   transform: scale(1.08);
 }
 
